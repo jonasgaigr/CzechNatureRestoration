@@ -60,7 +60,7 @@ n2k_oop <- readr::read_csv2(
   dplyr::select(SITECODE, oop)
 
 #--------------------------------------------------#
-## Ciselnik RP AOPK CR ---- 
+## NCA CR Regional brancher ---- 
 #--------------------------------------------------#
 rp_code <- readr::read_csv2(
   "Data/Input/n2k_rp_25.csv", 
@@ -153,7 +153,14 @@ n2k_union <- sf::st_join(evl, po)
 slozka_lokal <- "C:/Users/jonas.gaigr/Documents/host_data/"
 
 #------------------------------------------------------#
-## Zdrojova data - export z NDOP ----
+## Soecies data ----
+# export obsahuje data o vyskytu citlivych druhu: 
+# kompletni pouze pro overene uzivatele,
+# bez vyskytu citlivych druhu na vyzadani na jonas.gaigr@aopk.gov.cz
+#------------------------------------------------------#
+
+#------------------------------------------------------#
+## Habitats data ----
 # export obsahuje data o vyskytu citlivych druhu: 
 # kompletni pouze pro overene uzivatele,
 # bez vyskytu citlivych druhu na vyzadani na jonas.gaigr@aopk.gov.cz
